@@ -3,6 +3,7 @@ import ToDo from "./components/ToDo";
 import axios from "axios";
 import { baseURL } from "./utils/constant";
 import Popup from "./components/Popup";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   const [toDos, setToDos] = useState([]);
@@ -30,16 +31,18 @@ const App = () => {
   };
 
   return (
-    <main>
-      <div className="container">
-        <h1 className="title">ToDo App</h1>
+    <main className=" mx-auto ">
+     
+      <div className="container w-1/2 mx-auto ">
+        
+        {/* <h1 className="title text-black ">Task management App</h1> */}
 
         <div className="input_holder">
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
             type="text"
-            placeholder="Add a ToDo..."
+            placeholder="Add Your Task..."
           />
           <button onClick={saveToDo}>Add</button>
         </div>
